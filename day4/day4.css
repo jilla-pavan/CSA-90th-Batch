@@ -1,0 +1,20 @@
+.container {
+    background-color: rgb(197, 100, 100);
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+    align-items: center;
+}
+.parent {
+    display: flex;
+    gap: 10px;
+}
+li{
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    list-style: none;
+}
+
