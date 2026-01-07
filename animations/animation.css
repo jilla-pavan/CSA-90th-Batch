@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pri-col: yellow;
+  --sec-col: red;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: steelblue;
+  /* animation-name: box-move;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in;
+  animation-fill-mode: backwards;
+  animation-direction: reverse; */
+
+  animation: box-move 2s ease-in 3 backwards,
+    bg-color 6s linear infinite alternate,
+    rotate-move 4s ease-in-out infinite alternate;
+}
+
+@keyframes box-move {
+  from {
+    transform: translateX(0);
+    background-color: steelblue;
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes bg-color {
+  0% {
+    background-color: steelblue;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes rotate-move {
+  from {
+    transform: translate(30px, 20px) rotate(20deg);
+  }
+  to {
+    transform: translate(30px, 20px) rotate(50deg);
+  }
+}
+
+/* @keyframes moveBox {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200px);
+  }
+} */
+
+.btn {
+  margin-top: 100px;
+  padding: 14px 30px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  /* TRANSITION */
+  /* transition-property: background-color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+  transition-delay: 1s; */
+  transition: background-color 0.4s ease-in, transform 0.4s ease-in;
+}
+
+.btn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+.box-1 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--pri-col);
+  color: var(--sec-col);
+  margin-top: 50px;
+}
+.box-2 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--pri-col);
+  color: var(--sec-col);
+  margin-top: 50px;
+}
+.box-3 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--pri-col);
+  color: var(--sec-col);
+  margin-top: 50px;
+}
